@@ -1,72 +1,614 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
-<!-- bootstrap cdn -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<!-- animate.css -->
-<link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
-<!-- owl carousel style -->
-<link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
-<!-- font-awesome -->
-<link rel="stylesheet" href="assets/fontawesome-free-6.3.0-web/css/all.min.css">
-<!-- my css -->
-<link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/image/service-icon-hover-01.png" type="image/x-icon">
+
+    <!-- bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- animate.css -->
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+    <!-- owl carousel style -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.3.0-web/css/all.min.css"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+
+    <!-- <section id="preloader">
+      
+    </section> -->
+
     <header class="container-fluid">
-        <div class="d-flex justify-content-between">
-                <div class="p-3">
-                    <h3><a href="">
-                        <b>Banner</b>
-                    </a></h3>
-                </div>
-       
+      <div class="d-none d-lg-flex justify-content-between">
+        <div class="p-2">
+          <ul>
+            <li class="mx-2">
+              <h3>
+                <a href="">
+                  <b>Banner</b>
+                </a>
+              </h3>
+            </li>
+            <li id="logged_in_user" class="mx-3 p-2">
+              <strong>
+                <a>مهدی حسین آبادی
+                  <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </a>
+              </strong>
+              <div class="p-3">
+                <ul class="p-2">
+                  <li class="p-2 d-flex justify-content-between">
+                    <a>داشبورد </a>
+                    <i class="fas fa fa-user-check header_icons"></i>
+                  </li>
+                  <li class="p-2 d-flex justify-content-between">
+                    <a>خروج </a>
+                    <i class="fas fa fa-sign-out header_icons"></i>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mx-3 p-2">
+              <a id="btn_show_search_input">
+                <i class="fas fa fa-search"></i>
+              </a>
+            </li>
+            <li id="search_input" class="mx-3">
+              <span class="search_box">
+                <span id="close_btn" class="p-3 bg-dark text-light rounded-2"><i class="fa fa-close"></i></span>
+                <form action="" method="post">
+                  <input
+                    type="text"
+                    class="search_input"
+                    id="search_input"
+                    name="search_input"
+                    placeholder="در اینجا جستجو کنید..."
+                  />
+                </form>
+                <span class="p-3"><i class="fas fa fa-search"></i></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
         <div class="p-3">
-            <ul>
-                <li class='mx-3'>
-                    <a href="">خانه</a>
-                </li>
-                <li class='mx-3'>
-                    <a href="">ورود</a>
-                </li>
-                <li class='mx-3'>
-                    <a href="">ثبت نام</a>
-                </li>
-                <li class='mx-3'>
-                    <span>
-                        <a href="">مهدی حسین آبادی</a>
-                    </span>
-                    <span>
-                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                    </span>
-                </li>
-            </ul>
+          <ul>
+            <li class="mx-3">
+              <a href="">خانه</a>
+            </li>
+            <li class="mx-3">
+              <a href="">ورود</a>
+            </li>
+            <li class="mx-3">
+              <a href="">ثبت نام</a>
+            </li>
+          </ul>
         </div>
-        </div>
+      </div>
+      <!-- mobile menu -->
+      <div id="mobile_navbar" class="d-flex justify-content-between p-2 d-lg-none">
+        <!-- navbar default items -->
+      <span><h3>
+        <a href="">
+          <b>Banner</b>
+        </a>
+      </h3></span>
+
+      <span id="btn_show_navbar" class="h3">
+        <i class="fa fas fa-list-ol"></i>
+      </span>
+      </div>
+       <!-- navbar list -->
+       <div id="navbar_list" class="d-lg-none">
+        <ul class="p-2">
+          <li class="nav-link">
+             <span id="show_user_list">
+              <a>مهدی حسین آبادی
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              </a>
+             </span>
+             <div id="user_list" class="rounded-2 me-4">
+              <span class="border-bottom">داشبورد</span>
+              <span>خروج</span>
+             </div>
+          </li>
+          <li class="nav-link">
+            <a href="" class="nav-item">
+              ورود
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="" class="nav-item">
+              ثبت نام
+            </a>
+          </li>
+          <li class="nav-link mt-1 rounded-3" id="search_mobile_box">
+            <form action="" method="post">
+              <input
+              type="text"
+              class="search_input"
+              id="search_input"
+              name="search_input"
+              placeholder="در اینجا جستجو کنید..."
+            />
+            <button class="btn btn-success p-2">
+              <i class="fa fa-search"></i>
+            </button>
+            </form>
+          </li>
+        </ul>
+      </div>
     </header>
 
+    <main id="main_content" class="mt-3 container-fluid">
+        <section class="row p-2">
+          <div class="col-lg-2 bg-light rounded-3">
+            <h4 class="p-2">پربازدید ترین ها</h4>
+            <ul class="row d-flex justify-content-center d-lg-block justify-content-end">
+              <li class="beuty-list col-12 col-md-4 col-lg-12 mx-2 mt-2 bg-primary p-2 rounded-pill">
+                <a href="" class="text-light text-decoration-none">
+                تست
+                </a>
+                <div>
+                </div>
+                <span class="bg-dark rounded-2 category text-light">12</span>
+              </li>
+              <li class="beuty-list col-12 col-md-4 col-lg-12 mx-2 mt-2 bg-primary p-2 rounded-pill">
+                <a href="" class="text-light text-decoration-none">
+                تست
+                </a>
+                <div>
+                </div>
+                <span class="bg-dark rounded-2 category text-light">5</span>
+              </li>
+              <li class="beuty-list col-12 col-md-4 col-lg-12 mx-2 mt-2 bg-primary p-2 rounded-pill">
+                <a href="" class="text-light text-decoration-none">
+                تست
+                </a>
+                <div>
+                </div>
+                <span class="bg-dark rounded-2 category text-light">14</span>
+              </li>
+              <li class="beuty-list col-12 col-md-4 col-lg-12 mx-2 mt-2 bg-primary p-2 rounded-pill">
+                <a href="" class="text-light text-decoration-none">
+                تست
+                </a>
+                <div>
+                </div>
+                <span class="bg-dark rounded-2 category text-light">19</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-10 bg-light rounded-3">
+            <div id="slider_show" class="owl-carousel owl-theme owl-loaded">
+              <div class="owl-stage-outer">
+                  <div class="owl-stage">
+                      <div class="owl-item">
+                        <img src="assets/image/f80a0274-6eb8-4c79-b859-86872e0c37490025537572801.webp" alt="image" style="width: 700px;">
+                      </div>
+                      <div class="owl-item">
+                        <img src="assets/image/f80a0274-6eb8-4c79-b859-86872e0c37490025537572801.webp" alt="image" style="width: 700px;">
+                      </div>
+                      <div class="owl-item">
+                        <img src="assets/image/f80a0274-6eb8-4c79-b859-86872e0c37490025537572801.webp" alt="image" style="width: 700px;">
+                      </div>
+                      
+                  </div>
+              </div>
+              <div class="owl-dots">
+                  <div class="owl-dot active"><span></span></div>
+                  <div class="owl-dot"><span></span></div>
+                  <div class="owl-dot"><span></span></div>
+              </div>
+          </div>
+          </div>
+        </section>
+
+        <section id="shop_data">
+          <div class="container-fluid">
+            <div class="row g-3"> 
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-header">
+                    <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+                  </div>
+                  <div class="card-body">
+                    <h4>
+                     <a class="nav-item text-body" href="">
+                      لورم ایپسوم متن ساختگی با...
+                     </a>
+                    </h4>
+                    <div class="d-flex justify-content-between">
+                      <span>
+                        <a class="nav-item text-body" href="">
+                          تاریخ: 1401/1/1
+                        </a>
+                      </span>
+                    <span>
+                      نویسنده:
+                      <a class="text-body" href="">Omid4444</a>
+                    </span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+                   
+                    <div class="d-flex justify-content-between">
+                      <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+                        <a href="" class="nav-item">
+                          خرید
+                          <i class="fa fa-money-bill-transfer"></i>
+                        </a>
+                      </span>
+                      <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+                        <a href="" class="nav-item">
+                          سبد خرید
+                          <i class="fa fa-basket-shopping"></i>
+                        </a>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header">
+                  <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+                </div>
+                <div class="card-body">
+                  <h4>
+                   <a class="nav-item text-body" href="">
+                    لورم ایپسوم متن ساختگی با...
+                   </a>
+                  </h4>
+                  <div class="d-flex justify-content-between">
+                    <span>
+                      <a class="nav-item text-body" href="">
+                        تاریخ: 1401/1/1
+                      </a>
+                    </span>
+                  <span>
+                    نویسنده:
+                    <a class="text-body" href="">Omid4444</a>
+                  </span>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+                 
+                  <div class="d-flex justify-content-between">
+                    <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+                      <a href="" class="nav-item">
+                        خرید
+                        <i class="fa fa-money-bill-transfer"></i>
+                      </a>
+                    </span>
+                    <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+                      <a href="" class="nav-item">
+                        سبد خرید
+                        <i class="fa fa-basket-shopping"></i>
+                      </a>
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+          </div>
 
 
 
+          <div class="col-3">
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+              </div>
+              <div class="card-body">
+                <h4>
+                 <a class="nav-item text-body" href="">
+                  لورم ایپسوم متن ساختگی با...
+                 </a>
+                </h4>
+                <div class="d-flex justify-content-between">
+                  <span>
+                    <a class="nav-item text-body" href="">
+                      تاریخ: 1401/1/1
+                    </a>
+                  </span>
+                <span>
+                  نویسنده:
+                  <a class="text-body" href="">Omid4444</a>
+                </span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+               
+                <div class="d-flex justify-content-between">
+                  <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+                    <a href="" class="nav-item">
+                      خرید
+                      <i class="fa fa-money-bill-transfer"></i>
+                    </a>
+                  </span>
+                  <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+                    <a href="" class="nav-item">
+                      سبد خرید
+                      <i class="fa fa-basket-shopping"></i>
+                    </a>
+                  </span>
+                </div>
 
-<!-- bootstrap script -->
-<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<!-- jquery script -->
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<!-- owl carousel -->
-<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-<!-- font-awesome script -->
-<script src="assets/fontawesome-free-6.3.0-web/js/all.min.js"></script>
-<!-- my script -->
-<script src="assets/js/main.js"></script>
+              </div>
+            </div>
+        </div>
 
 
-</body>
+
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+            </div>
+            <div class="card-body">
+              <h4>
+               <a class="nav-item text-body" href="">
+                لورم ایپسوم متن ساختگی با...
+               </a>
+              </h4>
+              <div class="d-flex justify-content-between">
+                <span>
+                  <a class="nav-item text-body" href="">
+                    تاریخ: 1401/1/1
+                  </a>
+                </span>
+              <span>
+                نویسنده:
+                <a class="text-body" href="">Omid4444</a>
+              </span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+             
+              <div class="d-flex justify-content-between">
+                <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+                  <a href="" class="nav-item">
+                    خرید
+                    <i class="fa fa-money-bill-transfer"></i>
+                  </a>
+                </span>
+                <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+                  <a href="" class="nav-item">
+                    سبد خرید
+                    <i class="fa fa-basket-shopping"></i>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+      </div>
+
+
+      <div class="col-3">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+          </div>
+          <div class="card-body">
+            <h4>
+             <a class="nav-item text-body" href="">
+              لورم ایپسوم متن ساختگی با...
+             </a>
+            </h4>
+            <div class="d-flex justify-content-between">
+              <span>
+                <a class="nav-item text-body" href="">
+                  تاریخ: 1401/1/1
+                </a>
+              </span>
+            <span>
+              نویسنده:
+              <a class="text-body" href="">Omid4444</a>
+            </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+           
+            <div class="d-flex justify-content-between">
+              <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+                <a href="" class="nav-item">
+                  خرید
+                  <i class="fa fa-money-bill-transfer"></i>
+                </a>
+              </span>
+              <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+                <a href="" class="nav-item">
+                  سبد خرید
+                  <i class="fa fa-basket-shopping"></i>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header">
+          <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+        </div>
+        <div class="card-body">
+          <h4>
+           <a class="nav-item text-body" href="">
+            لورم ایپسوم متن ساختگی با...
+           </a>
+          </h4>
+          <div class="d-flex justify-content-between">
+            <span>
+              <a class="nav-item text-body" href="">
+                تاریخ: 1401/1/1
+              </a>
+            </span>
+          <span>
+            نویسنده:
+            <a class="text-body" href="">Omid4444</a>
+          </span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+         
+          <div class="d-flex justify-content-between">
+            <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+              <a href="" class="nav-item">
+                خرید
+                <i class="fa fa-money-bill-transfer"></i>
+              </a>
+            </span>
+            <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+              <a href="" class="nav-item">
+                سبد خرید
+                <i class="fa fa-basket-shopping"></i>
+              </a>
+            </span>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+  <div class="col-3">
+    <div class="card">
+      <div class="card-header">
+        <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+      </div>
+      <div class="card-body">
+        <h4>
+         <a class="nav-item text-body" href="">
+          لورم ایپسوم متن ساختگی با...
+         </a>
+        </h4>
+        <div class="d-flex justify-content-between">
+          <span>
+            <a class="nav-item text-body" href="">
+              تاریخ: 1401/1/1
+            </a>
+          </span>
+        <span>
+          نویسنده:
+          <a class="text-body" href="">Omid4444</a>
+        </span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+       
+        <div class="d-flex justify-content-between">
+          <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+            <a href="" class="nav-item">
+              خرید
+              <i class="fa fa-money-bill-transfer"></i>
+            </a>
+          </span>
+          <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+            <a href="" class="nav-item">
+              سبد خرید
+              <i class="fa fa-basket-shopping"></i>
+            </a>
+          </span>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+<div class="col-3">
+  <div class="card">
+    <div class="card-header">
+      <img src="assets/image/download.webp" class='w-100' alt="" srcset="">
+    </div>
+    <div class="card-body">
+      <h4>
+       <a class="nav-item text-body" href="">
+        لورم ایپسوم متن ساختگی با...
+       </a>
+      </h4>
+      <div class="d-flex justify-content-between">
+        <span>
+          <a class="nav-item text-body" href="">
+            تاریخ: 1401/1/1
+          </a>
+        </span>
+      <span>
+        نویسنده:
+        <a class="text-body" href="">Omid4444</a>
+      </span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که ...</p>
+     
+      <div class="d-flex justify-content-between">
+        <span class="bg-success p-2 rounded-3 w-50 text-center mx-1">
+          <a href="" class="nav-item">
+            خرید
+            <i class="fa fa-money-bill-transfer"></i>
+          </a>
+        </span>
+        <span class="bg-warning p-2 rounded-3 w-50 text-center mx-1">
+          <a href="" class="nav-item">
+            سبد خرید
+            <i class="fa fa-basket-shopping"></i>
+          </a>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</div>
+          </div>
+        </section>
+    </main>
+
+
+    <!-- bootstrap script -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!-- jquery script -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- owl carousel -->
+    <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <!-- font-awesome script -->
+    <script src="assets/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+    <!-- my script -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
