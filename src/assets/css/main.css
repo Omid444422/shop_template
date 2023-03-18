@@ -87,7 +87,7 @@ header ul {
 #navbar_list {
   display: none;
   width: 100%;
-  height: 40vh;
+  height: 38vh;
 }
 #navbar_list a {
   padding: 0.2rem;
@@ -136,6 +136,10 @@ header ul {
   width: 20%;
   text-align: center;
   padding: auto 0.5rem;
+}
+
+#slider_show {
+  padding: 0.4rem;
 }
 
 #shop_data a {

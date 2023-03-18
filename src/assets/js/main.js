@@ -53,5 +53,30 @@ $('#user_list').slideToggle();
 })
 
 
+$(".owl-carousel").owlCarousel({
+    rtl:true,
+    items:1.7,
+    loop:true,
+    autoplay:true,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600 :{
+            items:1
+        },
+        768 :{
+            items:1.2
+        },
+        992 :{
+            items:1.2
+        },
+        1200 :{
+            items:1.7
+        }
+    }
+});
+
 
 });
