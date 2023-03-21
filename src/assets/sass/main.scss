@@ -5,6 +5,7 @@
 body,html {
     background-color: $white_background;
     overflow-x: hidden;
+    font-family: Iran-Sans ,'Courier New', Courier, monospace;
 }
 
 /* width */
@@ -187,3 +188,18 @@ header {
 footer{
     background: #ff7e5f;
 }
+
+
+.single_img {
+    width: auto; height: 600px;
+}
+
+.single_links{
+    text-decoration: none;
+    color: black;
+}
+
+.single_h1 {
+    font-size: 1.5rem;
+}
+

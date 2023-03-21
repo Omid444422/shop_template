@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Iran-Sans;
+  src: url(../fonts/A-Iranian-Sans/Iranian\ Sans.ttf);
+}
 @media screen and (max-width: 992.8px) {
   span, p, pre, h1, h2 {
     text-align: center !important;
@@ -6,6 +10,7 @@
 body, html {
   background-color: #dcdcdc;
   overflow-x: hidden;
+  font-family: Iran-Sans, "Courier New", Courier, monospace;
 }
 
 /* width */
@@ -170,6 +175,20 @@ header ul {
 
 footer {
   background: #ff7e5f;
+}
+
+.single_img {
+  width: auto;
+  height: 600px;
+}
+
+.single_links {
+  text-decoration: none;
+  color: black;
+}
+
+.single_h1 {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
