@@ -8,6 +8,27 @@ body, html {
   overflow-x: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d3557;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #457b9d;
+  border-radius: 0.3rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb703;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -145,6 +166,10 @@ header ul {
 #shop_data a {
   text-decoration: none;
   color: white;
+}
+
+footer {
+  background: #ff7e5f;
 }
 
 /*# sourceMappingURL=main.css.map */
