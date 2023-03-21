@@ -177,9 +177,13 @@ footer {
   background: #ff7e5f;
 }
 
+#single_content {
+  width: 1000px;
+}
+
 .single_img {
   width: auto;
-  height: 600px;
+  height: 500px;
 }
 
 .single_links {
@@ -189,6 +193,20 @@ footer {
 
 .single_h1 {
   font-size: 1.5rem;
+}
+
+.single_p {
+  font-size: 1rem;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+#single_footer {
+  margin-top: 5rem;
+}
+
+.single_footer_img {
+  height: 300px;
 }
 
 /*# sourceMappingURL=main.css.map */
