@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border-radius: 50%;
+        }
+    </style>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<section class="container-sm w-50 mt-5">
+    <div class="profile_background d-flex justify-content-center">
+        <img src="assets/image/f80a0274-6eb8-4c79-b859-86872e0c37490025537572801.webp" alt="" class="avatar">
+    </div>
+    <div id="profile_body">
+        <span class="p-2">نام کاربری:</span>
+        <h2 class="p-2 text-center">Omid4444</h2>
+       <div class="d-flex justify-content-around">
+        <span class="p-2">
+            تعداد پست ها: 25
+        </span>
+        <span>رنک: کاربر</span>
+       </div>
+        <p class="p-2">درباره من:</p>
+        <p class="p-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و </p>
+        <div>
+            <button class="btn btn-danger w-100 p-2">حذف اکانت</button>
+        </div>
+    </div>
+
+    <div class="p-2 bg-light rounded-3 mt-2">
+       <span class="text-center">آیتم های خریداری شده</span>
+       <button id="btn_list" class="btn btn-info">show</button>
+        <table class="table d-none">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">نام کالا</th>
+                <th scope="col">قیمت کالا</th>
+                <th scope="col">تاریخ خرید</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                    <a href="" class="text-body nav-item text-decoration-none">
+                        آیتم شماره 1
+                    </a>
+                </td>
+                <td>52,000</td>
+                <td>1401/1/1</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                    <a href="" class="text-body nav-item text-decoration-none">
+                        آیتم شماره 1
+                    </a>
+                </td>
+                <td>52,000</td>
+                <td>1401/1/1</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+</section>
+
+
+
+<!-- bootstrap script -->
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    var is_show = false;
+    const table = document.querySelector('table');
+    const btn = document.getElementById('btn_list');
+    function toggle_list(){
+        if(!is_show){
+            table.classList.remove('d-none');
+            is_show = true;
+        }else {
+            table.classList.add('d-none');
+            is_show = false;
+        }
+    }
+    btn.addEventListener('click',toggle_list);
+</script>
+</body>
+</html>
