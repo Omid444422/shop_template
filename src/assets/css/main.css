@@ -2,11 +2,6 @@
   font-family: Iran-Sans;
   src: url(../fonts/A-Iranian-Sans/Iranian\ Sans.ttf);
 }
-@media screen and (max-width: 992.8px) {
-  span, p, pre, h1, h2 {
-    text-align: center !important;
-  }
-}
 body, html {
   background-color: #dcdcdc;
   overflow-x: hidden;
@@ -227,6 +222,100 @@ footer {
   background: -webkit-linear-gradient(to right, #414345, #232526); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
+}
+
+#navbar {
+  width: 100%;
+  height: 8vh;
+}
+#navbar:first-child {
+  background-color: #003049;
+  width: 20%;
+  height: 8vh;
+}
+#navbar:first-child #navbar_btn span {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#navbar_data {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  background-color: #003049;
+  overflow: auto;
+  color: white;
+}
+#navbar_data a {
+  color: white;
+  text-decoration: none;
+}
+#navbar_data span, #navbar_data li, #navbar_data a {
+  cursor: pointer;
+}
+#navbar_data img {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#navbar_data ul {
+  list-style: none;
+}
+#navbar_data ul li::before {
+  content: "* ";
+}
+
+#banner {
+  background: #FFA17F; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00223E, #FFA17F); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#btn_close_navbar {
+  position: relative;
+}
+#btn_close_navbar span {
+  position: absolute;
+  top: 0%;
+  right: 90%;
+}
+
+.actived_list {
+  border-right: 2px solid red;
+}
+
+#data_body {
+  width: 80%;
+  margin-right: 21%;
+}
+#data_body sup.badge {
+  font-size: 11px;
+}
+
+.card_alert {
+  height: 20px;
+}
+
+.card_alert_danger {
+  color: #d61f1f;
+}
+
+@media screen and (max-width: 992.8px) {
+  span, p, pre, h1, h2 {
+    text-align: center !important;
+  }
+  #navbar_data {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #navbar_data {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 @import 'font.scss';
 @import 'variables.scss';
-@import 'responsive.scss';
+
 
 body,html {
     background-color: $white_background;
@@ -244,3 +244,93 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 
     color: white;
   }
+
+//   panel
+#navbar {
+    width: 100%;
+    height: 8vh;
+   &:first-child{
+        background-color: #003049;
+        width: 20%;
+        height: 8vh;
+        #navbar_btn span{
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+  
+}
+#navbar_data {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background-color: #003049;
+    overflow: auto;
+    color: white;
+    a{
+        color: white;
+    text-decoration: none;
+    }
+    span,li,a{
+        cursor: pointer;
+    }
+    img {
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    ul {
+        list-style: none;
+        li::before {
+            content: '* ';
+        }
+    }
+}
+
+#banner {
+    background: #FFA17F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#btn_close_navbar{
+    position: relative;
+    span{
+        position: absolute;
+        top: 0%;
+        right: 90%;
+    }
+}
+
+.actived_list {
+    border-right: 2px solid red;
+}
+
+#data_body {
+    width: calc(100% - 20%);
+    margin-right: 21%;
+    sup.badge {
+        font-size: 11px;
+    }
+}
+
+
+// admin dashboard
+
+.card_alert{
+    height: 20px;
+}
+
+.card_alert_danger {
+    color: #d61f1f;
+}
+
+.card_alert_success {
+    
+}
+
+@import 'responsive.scss';

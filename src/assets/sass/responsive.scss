@@ -2,4 +2,15 @@
     span,p,pre,h1,h2{
         text-align: center !important;
     }
+    #navbar_data{
+        width: 50%;
+    }
 }
+
+
+@media screen and (max-width:600px){
+    #navbar_data{
+        width: 70%;
+    }
+}
+

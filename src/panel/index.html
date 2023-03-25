@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome-free-6.3.0-web/css/all.min.css"
+    />
+    <!-- bootstrap link -->
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <section id="navbar" class="rounded-1">
+      <div id="navbar_btn" class="d-flex justify-content-center d-none">
+        <span id="btn_show_navbar">
+          <i class="fa-solid fa-list"></i>
+        </span>
+      </div>
+      <section id="navbar_data">
+        <!-- close button -->
+        <div id="btn_close_navbar">
+          <span>
+            <i class="fa-solid fa-rectangle-xmark"></i>
+          </span>
+        </div>
+        <!-- banner -->
+        <div id="banner" class="rounded-2">
+          <h1 class="text-center">
+            <a href="" class="nav-item"> Banner </a>
+          </h1>
+        </div>
+        <!-- user avatar -->
+        <div class="text-center pt-2">
+          <img src="../assets/image/download.webp" alt="" />
+        </div>
+        <!-- username -->
+        <div class="text-center p-2">
+          <a href="">Omid4444</a>
+        </div>
+        <!-- list navbar -->
+        <div class="p-2">
+          <span class="btn_target">
+            <i class="fa-solid fa-user"></i>
+            نام کاربری
+            <sup>
+              <i class="fa-solid fa-caret-down"></i>
+            </sup>
+          </span>
+          <ul class="p-2 d-none">
+            <li class="px-2">پروفایل کاربری</li>
+            <li class="px-2">تغییر پسورد</li>
+            <li class="px-2">تغییر نام کاربری</li>
+          </ul>
+        </div> 
+         <!-- list navbar -->
+         <div class="p-2">
+            <span class="btn_target">
+              <i class="fa-solid fa-user"></i>
+              نام کاربری
+              <sup>
+                <i class="fa-solid fa-caret-down"></i>
+              </sup>
+            </span>
+            <ul class="p-2 d-none">
+              <li class="px-2">پروفایل کاربری</li>
+              <li class="px-2">تغییر پسورد</li>
+              <li class="px-2">تغییر نام کاربری</li>
+            </ul>
+          </div>
+        <!-- normal navbar -->
+        <div class="p-2">
+          <a href="">تست</a>
+        </div>
+      
+        <!-- exit button -->
+        <div class="p-2">
+          <form action="" method="post">
+            <button class="btn btn-warning w-100" type="submit">خروج</button>
+          </form>
+        </div>
+
+      </section>
+    </section>
+
+    <section id="data_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="position-relative">
+              <i class="fa-solid fa-bell text-primary"></i>
+              اعلانات
+              <sup class="bg-danger badge position-absolute">3</sup>
+            </h4>
+          </div>
+          <div class="col-12 row">
+              <div class="col-8 mx-5 p-2 align-items-center bg-light rounded-3">
+                <div class=" d-flex justify-content-between">
+                  <h4 class="pe-2">
+                    <i class="card_alert card_alert_danger fa-solid fa-circle-exclamation"></i>
+                   lorem
+                   </h4>
+                   <span>
+                    <i class="fa-solid fa-caret-down"></i>
+                   </span>
+                </div>
+                <hr>
+                <p class="d-none">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- font-awesome script -->
+    <script src="../assets/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+    <!-- bootstrap scripts -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // toggle navbar
+      var is_Show = true;
+      // buttons
+      const btn_show_navbar = document.getElementById("btn_show_navbar");
+      const btn_close_navbar = document.getElementById("btn_close_navbar");
+      // navbar
+      const navbar_data = document.getElementById("navbar_data");
+      const navbar_btn = document.getElementById("navbar_btn");
+
+      function close_navbar_data() {
+        if (is_Show) {
+          navbar_data.classList.add("d-none");
+          navbar_btn.classList.remove("d-none");
+          is_Show = false;
+        }
+      }
+
+      function open_navbar_data() {
+        if (!is_Show) {
+          navbar_data.classList.remove("d-none");
+          navbar_btn.classList.add("d-none");
+          is_Show = true;
+        }
+      }
+
+      btn_close_navbar.addEventListener("click", close_navbar_data);
+      btn_show_navbar.addEventListener("click", open_navbar_data);
+
+    //   navbars list show and hidden items 
+      const btn_target = document.querySelectorAll(".btn_target");
+        // this function remove all active items
+      function removeAllTarget() {
+        btn_target.forEach((btn) => {
+          btn.parentElement.classList.remove("actived_list");
+          btn.nextElementSibling.classList.add("d-none");
+        });
+      }
+    //   for active items
+      btn_target.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          removeAllTarget();
+          btn.parentElement.classList.add("actived_list");
+          btn.nextElementSibling.classList.remove("d-none");
+        });
+      });
+    </script>
+  </body>
+</html>
