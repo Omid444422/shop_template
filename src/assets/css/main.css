@@ -300,8 +300,28 @@ footer {
   height: 20px;
 }
 
-.card_alert_danger {
-  color: #d61f1f;
+.card_alert_success {
+  color: #28da10;
+}
+
+.card_alert_info {
+  color: #1c4da0;
+}
+
+.notification_card {
+  cursor: pointer;
+}
+
+.notification_card_danger {
+  border-top: 3px solid red;
+}
+
+.notification_card_success {
+  border-top: 3px solid green;
+}
+
+.notification_card_info {
+  border-top: 3px solid blue;
 }
 
 @media screen and (max-width: 992.8px) {

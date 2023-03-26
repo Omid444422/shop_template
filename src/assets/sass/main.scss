@@ -325,12 +325,29 @@ background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, F
     height: 20px;
 }
 
-.card_alert_danger {
-    color: #d61f1f;
+.card_alert_success {
+    color: #28da10;
 }
 
-.card_alert_success {
-    
+.card_alert_info {
+    color: #1c4da0;
 }
+
+.notification_card {
+    cursor: pointer;
+}
+
+.notification_card_danger {
+    border-top: 3px solid red;
+}
+
+.notification_card_success {
+    border-top: 3px solid green;
+}
+
+.notification_card_info {
+    border-top: 3px solid blue;
+}
+
 
 @import 'responsive.scss';

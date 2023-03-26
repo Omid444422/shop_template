@@ -101,11 +101,11 @@
               <sup class="bg-danger badge position-absolute">3</sup>
             </h4>
           </div>
-          <div class="col-12 row">
-              <div class="col-8 mx-5 p-2 align-items-center bg-light rounded-3">
-                <div class=" d-flex justify-content-between">
+          <div class="col-12 row gap-3">
+              <div class="notification_card notification_card_success col-8 mx-5 p-2 align-items-center bg-light rounded-3">
+                <div class="show_notification d-flex justify-content-between">
                   <h4 class="pe-2">
-                    <i class="card_alert card_alert_danger fa-solid fa-circle-exclamation"></i>
+                    <i class="card_alert card_alert_success fa-solid fa-check"></i>
                    lorem
                    </h4>
                    <span>
@@ -115,6 +115,36 @@
                 <hr>
                 <p class="d-none">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </p>
               </div>
+
+              <div class="notification_card notification_card_danger col-8 mx-5 p-2 align-items-center bg-light rounded-3">
+                <div class="show_notification d-flex justify-content-between">
+                  <h4 class="pe-2">
+                    <i class="card_alert text-danger fa-solid fa-circle-exclamation"></i>
+                   lorem
+                   </h4>
+                   <span>
+                    <i class="fa-solid fa-caret-down"></i>
+                   </span>
+                </div>
+                <hr>
+                <p class="d-none">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </p>
+              </div>
+
+
+              <div class="notification_card notification_card_info col-8 mx-5 p-2 align-items-center bg-light rounded-3">
+                <div class="show_notification d-flex justify-content-between">
+                  <h4 class="pe-2">
+                    <i class="card_alert card_alert_info fa-solid fa-circle-info"></i>
+                   lorem
+                   </h4>
+                   <span>
+                    <i class="fa-solid fa-caret-down"></i>
+                   </span>
+                </div>
+                <hr>
+                <p class="d-none">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </p>
+              </div>
+
           </div>
         </div>
       </div>
@@ -171,6 +201,23 @@
           btn.nextElementSibling.classList.remove("d-none");
         });
       });
+
+      // show notification
+      const show_notifications = document.querySelectorAll('.show_notification');
+      var is_notification_show = false;
+      show_notifications.forEach(notification =>{
+        notification.addEventListener('click',function(event){
+           if(!is_notification_show){
+            is_notification_show = true;
+            event.target.nextElementSibling.nextElementSibling.classList.remove('d-none');
+           }else{
+            is_notification_show = false;
+            event.target.nextElementSibling.nextElementSibling.classList.add('d-none');
+           }
+        });
+      })
+
+
     </script>
   </body>
 </html>
