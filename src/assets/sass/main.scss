@@ -2,33 +2,34 @@
 @import 'variables.scss';
 
 
-body,html {
+body,
+html {
     background-color: $white_background;
     overflow-x: hidden;
-    font-family: Iran-Sans ,'Courier New', Courier, monospace;
+    font-family: Iran-Sans, 'Courier New', Courier, monospace;
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #1d3557;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #457b9d;
     border-radius: .3rem;
 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #ffb703;
-  }
+}
 
 
 * {
@@ -48,6 +49,7 @@ header {
     background: linear-gradient(to right, #feb47b, #ff7e5f);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     align-items: center;
+
     a {
         text-decoration: none;
         color: #3d405b !important;
@@ -97,6 +99,7 @@ header {
         position: absolute;
         background: white;
         border-radius: 1rem;
+
         // box shadow write here
         ul {
             display: block;
@@ -113,29 +116,32 @@ header {
     display: none;
 }
 
-#navbar_list{
+#navbar_list {
     display: none;
-  width: 100%;
-  height: 38vh;
-  a {
-    padding: .2rem;
-  }
-  ul{
-    display: block;
-    list-style: none;
-    float: right;
-  }
+    width: 100%;
+    height: 38vh;
+
+    a {
+        padding: .2rem;
+    }
+
+    ul {
+        display: block;
+        list-style: none;
+        float: right;
+    }
 }
 
-#user_list{
+#user_list {
     background-color: #8d99ae;
-    span{
+
+    span {
         display: block;
         padding: .3rem;
     }
 }
 
-#search_mobile_box{
+#search_mobile_box {
     background-color: #8d99ae;
 
 }
@@ -151,6 +157,7 @@ header {
 
 .beuty-list {
     position: relative;
+
     div {
         z-index: 2;
         position: absolute;
@@ -174,33 +181,33 @@ header {
     padding: auto .5rem;
 }
 
-#slider_show{
+#slider_show {
     padding: .4rem;
 }
 
 #shop_data {
-    a{
+    a {
         text-decoration: none;
         color: white;
     }
 }
 
-footer{
+footer {
     background: #ff7e5f;
 }
 
 // single page 
 
-#single_content{
+#single_content {
     width: 1000px;
 }
 
 .single_img {
     width: auto;
-     height: 500px;
+    height: 500px;
 }
 
-.single_links{
+.single_links {
     text-decoration: none;
     color: black;
 }
@@ -209,13 +216,13 @@ footer{
     font-size: 1.5rem;
 }
 
-.single_p{
-    font-size:1rem;
+.single_p {
+    font-size: 1rem;
     font-weight: bold;
     word-wrap: break-word;
 }
 
-#single_footer{
+#single_footer {
     margin-top: 5rem;
 }
 
@@ -224,10 +231,13 @@ footer{
 }
 
 .profile_background {
-    background: #5f2c82;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: #5f2c82;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #49a09d, #5f2c82);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .avatar {
@@ -235,32 +245,38 @@ footer{
     width: 250px;
     height: 250px;
     border-radius: 50%;
-  }
+}
 
-  #profile_body {
-    background: #232526;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#profile_body {
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: white;
-  }
+}
 
 //   panel
 #navbar {
     width: 100%;
     height: 8vh;
-   &:first-child{
+
+    &:first-child {
         background-color: #003049;
         width: 20%;
         height: 8vh;
-        #navbar_btn span{
+
+        #navbar_btn span {
             font-size: 30px;
             color: white;
             cursor: pointer;
         }
     }
-  
+
 }
+
 #navbar_data {
     width: 20%;
     height: 100%;
@@ -270,21 +286,28 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
     background-color: #003049;
     overflow: auto;
     color: white;
-    a{
+
+    a {
         color: white;
-    text-decoration: none;
+        text-decoration: none;
     }
-    span,li,a{
+
+    span,
+    li,
+    a {
         cursor: pointer;
     }
+
     img {
         vertical-align: middle;
         width: 100px;
         height: 100px;
         border-radius: 50%;
     }
+
     ul {
         list-style: none;
+
         li::before {
             content: '* ';
         }
@@ -292,14 +315,18 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 }
 
 #banner {
-    background: #FFA17F;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FFA17F;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00223E, #FFA17F);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#btn_close_navbar{
+#btn_close_navbar {
     position: relative;
-    span{
+
+    span {
         position: absolute;
         top: 0%;
         right: 90%;
@@ -313,6 +340,7 @@ background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, F
 #data_body {
     width: calc(100% - 20%);
     margin-right: 21%;
+
     sup.badge {
         font-size: 11px;
     }
@@ -321,7 +349,7 @@ background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, F
 
 // admin dashboard
 
-.card_alert{
+.card_alert {
     height: 20px;
 }
 

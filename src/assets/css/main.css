@@ -2,7 +2,8 @@
   font-family: Iran-Sans;
   src: url(../fonts/A-Iranian-Sans/Iranian\ Sans.ttf);
 }
-body, html {
+body,
+html {
   background-color: #dcdcdc;
   overflow-x: hidden;
   font-family: Iran-Sans, "Courier New", Courier, monospace;
@@ -205,9 +206,12 @@ footer {
 }
 
 .profile_background {
-  background: #5f2c82; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #5f2c82;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .avatar {
@@ -218,9 +222,12 @@ footer {
 }
 
 #profile_body {
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
 
@@ -253,7 +260,9 @@ footer {
   color: white;
   text-decoration: none;
 }
-#navbar_data span, #navbar_data li, #navbar_data a {
+#navbar_data span,
+#navbar_data li,
+#navbar_data a {
   cursor: pointer;
 }
 #navbar_data img {
@@ -270,9 +279,12 @@ footer {
 }
 
 #banner {
-  background: #FFA17F; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00223E, #FFA17F); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FFA17F;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00223E, #FFA17F);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #btn_close_navbar {
